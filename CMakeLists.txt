@@ -54,17 +54,17 @@ endif()
 include_directories(include src src/rml/include ${CMAKE_CURRENT_BINARY_DIR})
 
 option(TBB_BUILD_SHARED          "Build TBB shared library" ON)
-option(TBB_BUILD_STATIC          "Build TBB static library" ON)
-option(TBB_BUILD_TBBMALLOC       "Build TBB malloc library" ON)
-option(TBB_BUILD_TBBMALLOC_PROXY "Build TBB malloc proxy library" ON)
-option(TBB_BUILD_TESTS           "Build TBB tests and enable testing infrastructure" ON)
+option(TBB_BUILD_STATIC          "Build TBB static library" OFF)
+option(TBB_BUILD_TBBMALLOC       "Build TBB malloc library" OFF)
+option(TBB_BUILD_TBBMALLOC_PROXY "Build TBB malloc proxy library" OFF)
+option(TBB_BUILD_TESTS           "Build TBB tests and enable testing infrastructure" OFF)
 option(TBB_NO_DATE               "Do not save the configure date in the version string" OFF)
 option(TBB_BUILD_PYTHON          "Build TBB Python bindings" OFF)
 option(TBB_SET_SOVERSION         "Set the SOVERSION (shared library build version suffix)?" OFF)
 
 # When this repository is part of a larger build system of a parent project
 # we may not want TBB to set up default installation targets
-option(TBB_INSTALL_TARGETS       "Include build targets for 'make install'" ON)
+option(TBB_INSTALL_TARGETS       "Include build targets for 'make install'" OFF)
 
 if(APPLE)
   set(CMAKE_MACOSX_RPATH ON)
